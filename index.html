@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>スーパー浅利七海ジェネレーター</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      margin: 0;
+      padding: 20px;
+      background-color: #f9f9f9;
+      color: #333;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      height: 100vh;
+    }
+    h1 {
+      font-size: 20px;
+      margin: 5px 0 15px;
+      color: #555;
+    }
+    h2 {
+      font-size: 24px;
+      margin-bottom: 10px;
+    }
+    .highlight {
+      font-size: 1.8em;
+      margin-top: 0;
+      color: #007bff;
+    }
+    button {
+      padding: 10px 20px;
+      font-size: 16px;
+      border: none;
+      background-color: #007bff;
+      color: white;
+      border-radius: 5px;
+      cursor: pointer;
+      margin: 10px;
+    }
+    button:hover {
+      background-color: #0056b3;
+    }
+    footer {
+      font-size: 14px;
+      color: gray;
+      margin-top: 20px;
+    }
+    footer a {
+      color: gray;
+      text-decoration: none;
+    }
+    footer a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <h1>スーパー浅利七海ジェネレーター</h1>
+  <h2 id="display">
+    今度の浅利七海は「〇〇」だ！<br>
+    <span class="highlight">スーパー浅利七海△△</span>
+  </h2>
+  <button onclick="generateText()">生成</button>
+  <button id="shareButton">生成したスーパー浅利七海をX（旧Twitter）に投稿</button>
+
+  <footer>
+    <p>
+      <a href="https://x.com/5swi9" target="_blank">おくに @5swi9</a>
+    </p>
+  </footer>
+
+  <script>
+    const data = [
+      { kanji: "免税", english: "タックスフリー" },
+      { kanji: "絶景", english: "パノラマビュー" },
+      { kanji: "電光", english: "ライトニングサンダー" },
+      { kanji: "無敵", english: "ノージョブノーファミリー" },
+      { kanji: "友情", english: "フレンドシップ" },
+      { kanji: "新星", english: "ニューカマー" },
+      { kanji: "超速", english: "スピードスター" },
+      { kanji: "完全", english: "パーフェクト" },
+      { kanji: "鳥瞰", english: "バードアイ" },
+      { kanji: "空想", english: "ファンタジー" },
+      { kanji: "超人", english: "クリスティアーノ・ロナウド" },
+      { kanji: "無限", english: "インフィニティ" },
+      { kanji: "炊飯", english: "ライスクッカー" },
+      { kanji: "沈没", english: "タイタニック" },
+      { kanji: "天才", english: "ギフテッド" },
+      { kanji: "絶望", english: "ノーフューチャー" },
+      { kanji: "巨大プール", english: "ワイルドブルーヨコハマ" },
+      { kanji: "絶叫", english: "ウォォオオオオアアアアア" },
+      { kanji: "爆弾魔", english: "スズキタゴサク" },
+      { kanji: "面倒", english: "ゴボウノアクヌキー" },
+      { kanji: "陽キャ", english: "パーリーピーポー" },
+      { kanji: "身振り手振り", english: "ボディランゲージ" },
+      { kanji: "七冠", english: "フジーソータ" },
+      { kanji: "忍たまの犬", english: "ヘムヘム" },
+      { kanji: "香川真司", english: "ドルトムント" },
+      { kanji: "到着", english: "チェックイン" },
+      { kanji: "デカすぎ", english: "シロノワール" },
+      { kanji: "沈没", english: "タイタニック" },
+      { kanji: "飼育員", english: "ズーキーパー" },
+      { kanji: "げんこつ", english: "ノハラミサエ" },
+      { kanji: "半々", english: "ハーフアンドハーフ" },
+      { kanji: "防空システム", english: "アイアンドーム" },
+      { kanji: "変な犬", english: "ボルゾイ" },
+      { kanji: "お尻が無いおばあさん", english: "ヒップレスグランマ" },
+      { kanji: "拳銃舞踊", english: "ピストルダンス" },
+      { kanji: "はねトび", english: "ツカジョージ" },
+      { kanji: "ユーカリ", english: "コアラキスフレーバー" },
+      { kanji: "狂ってる飛行機", english: "ポケモンジェット" },
+      { kanji: "全開", english: "フルスロットル" },
+      { kanji: "トナカイ", english: "トニートニー・チョッパー " },
+      { kanji: "釈迦", english: "ゴータマシッダールタ" },
+      { kanji: "雪上走行", english: "スタッドレスタイヤ" },
+      { kanji: "機械運転手", english: "サイボーグドライバー" },
+      { kanji: "切り株", english: "バウムクーヘン" },
+    ];
+
+    let currentText = "";
+
+    function generateText() {
+      const randomIndex = Math.floor(Math.random() * data.length);
+      const selected = data[randomIndex];
+      currentText = `今度の浅利七海は「${selected.kanji}」だ！\nスーパー浅利七海${selected.english}`;
+      document.getElementById("display").innerHTML = 
+        `今度の浅利七海は「${selected.kanji}」だ！<br><span class="highlight">スーパー浅利七海${selected.english}</span>`;
+    }
+
+    document.getElementById("shareButton").addEventListener("click", function() {
+      const tweetText = encodeURIComponent(`${currentText}\nhttps://5swi9.github.io/superasarinanami-generator/\n#スーパー浅利七海シリーズ`);
+      const twitterUrl = `https://twitter.com/intent/tweet?text=${tweetText}`;
+      window.open(twitterUrl, "_blank");
+    });
+  </script>
+</body>
+</html>
